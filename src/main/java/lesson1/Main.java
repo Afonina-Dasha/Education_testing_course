@@ -1,11 +1,11 @@
 package lesson1;
+import java.util.Scanner;
 
 public class Main {
-    public Main() {
-    }
-
     public static void main(String[] args) {
-        Lesson1.task2();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите названия блюд для заказа: ");
+        String Count = scan.next();
     }
 }
 
