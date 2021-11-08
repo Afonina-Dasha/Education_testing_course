@@ -7,6 +7,4 @@ abstract class Sound extends Animal{
         return "Это животное издает звук: " + sound;
     }
 
-
-
 }

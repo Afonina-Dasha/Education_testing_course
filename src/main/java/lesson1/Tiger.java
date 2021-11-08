@@ -3,15 +3,20 @@ package lesson1;
 import java.util.Random;
 import java.util.UUID;
 
-public abstract class Tiger extends Animal {
+ public class Tiger extends Animal {
+
     public void Gen(){
         int gen1;
          gen = UUID.randomUUID();
     }
 
-    public Tiger(int heft, int age, UUID gen, RandomGender gender){
-        super(heft, age, gen, gender);
+    public Tiger(int heft, int age, UUID gen){
+        super(heft, age, gen);
     }
-
-
+    public @Override String voice(){
+        return "rrrr";
+    }
+    protected @Override Animal create_child(UUID child_gen){
+        return new Tiger(3, 0, child_gen);
+    }
 }
