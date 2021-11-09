@@ -6,7 +6,7 @@ public abstract class Animal {
     protected int heft; //вес
     protected int age; //возраст
     UUID gen; //уникальный генетический код
-    public void eat(){
+    public void eat(Food food){
     }
     public void walk(){
     }

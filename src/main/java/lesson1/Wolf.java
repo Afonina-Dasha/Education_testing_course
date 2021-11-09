@@ -2,7 +2,7 @@ package lesson1;
 
 import java.util.UUID;
 
-public class Wolf extends Animal{
+public class Wolf extends Predator{
     public Wolf(int heft, int age, UUID gen){
         super(heft, age, gen);
     }

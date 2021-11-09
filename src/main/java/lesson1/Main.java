@@ -12,8 +12,6 @@ public class Main {
     Animal cow = new Cow(1000, 6, UUID.randomUUID());
     Animal rabbit = new Rabbit(2, 0, UUID.randomUUID());
     System.out.println(tiger.getGender_1());
-
-
     }
 }
 

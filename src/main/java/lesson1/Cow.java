@@ -2,7 +2,7 @@ package lesson1;
 
 import java.util.UUID;
 
-public class Cow extends Animal{
+public class Cow extends Herbivores{
 
     public Cow(int heft, int age, UUID gen){
         super(heft, age, gen);

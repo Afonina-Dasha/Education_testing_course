@@ -3,7 +3,7 @@ package lesson1;
 import java.util.Random;
 import java.util.UUID;
 
- public class Tiger extends Animal {
+ public class Tiger extends Predator {
 
     public void Gen(){
         int gen1;
