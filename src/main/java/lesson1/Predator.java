@@ -10,4 +10,5 @@ public abstract class Predator extends Animal{
         super(heft, age, gen);
     }
 
+
 }

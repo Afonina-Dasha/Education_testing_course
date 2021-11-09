@@ -37,6 +37,7 @@ public abstract class Animal {
             return null;
         }
         UUID child_gen = UUID.fromString(this.gen.toString() + rep.gen.toString());
+        //new StringBuffer().append(gen).append(gen).toString(); - чтобы не занималась память
         return create_child(child_gen);
     }
     protected abstract Animal create_child(UUID child_gen);
