@@ -13,7 +13,7 @@ import java.util.UUID;
     public Tiger(int heft, int age, UUID gen){
         super(heft, age, gen);
     }
-    public @Override String voice(){
+    public @Override String voice(){ //переопределение метода voice для Tiger
         return "rrrr";
     }
     protected @Override Animal create_child(UUID child_gen){
