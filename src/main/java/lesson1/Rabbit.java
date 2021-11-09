@@ -10,6 +10,6 @@ public class Rabbit extends Animal{
         return "kh-kh";
     }
     protected @Override Animal create_child(UUID child_gen){
-        return new Tiger(3, 0, child_gen);
+        return new Rabbit(1, 0, child_gen);
     }
 }

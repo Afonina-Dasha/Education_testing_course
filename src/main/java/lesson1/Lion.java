@@ -10,6 +10,6 @@ public class Lion extends Animal{
         return "Arr-rrr";
     }
     protected @Override Animal create_child(UUID child_gen){
-        return new Lion(3, 0, child_gen);
+        return new Lion(2, 0, child_gen);
     }
 }

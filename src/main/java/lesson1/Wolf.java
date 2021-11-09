@@ -10,6 +10,6 @@ public class Wolf extends Animal{
         return "yyyyyy-yy-yy";
     }
     protected @Override Animal create_child(UUID child_gen){
-        return new Wolf(3, 0, child_gen);
+        return new Wolf(2, 0, child_gen);
     }
 }
