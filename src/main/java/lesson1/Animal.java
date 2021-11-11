@@ -3,10 +3,14 @@ import java.util.Random;
 import java.util.UUID;
 
 public abstract class Animal {
-    protected int heft; //вес
+    protected double heft; //вес
     protected int age; //возраст
-    UUID gen; //уникальный генетический код
+    private UUID gen; //уникальный генетический код
     public void eat(Food food){
+    }
+    Food food; // строчки 11-14 по аналогии с Engine
+    public Animal(Food food){
+        this.food = food;
     }
     public void walk(){
     }
@@ -18,22 +22,22 @@ public abstract class Animal {
         this.gen = gen;
         CalcGender();
     }
-    private String gender_1;
+    private String gender;
     private void CalcGender(){
         Random random = new Random();
         int temp = random.nextInt();
         if (temp%2 ==0){
-            gender_1 = "male";
+            gender = "male";
         }
         else {
-            gender_1 = "female";
+            gender = "female";
         }
     }
     public String getGender_1() {
-        return gender_1;
+        return gender;
     }
     public Animal Reproduction(Animal rep){
-        if(rep.gender_1 == this.gender_1 || rep.getClass() != this.getClass()){
+        if(rep.gender == this.gender || rep.getClass() != this.getClass()){
             return null;
         }
         UUID child_gen = UUID.fromString(this.gen.toString() + rep.gen.toString());

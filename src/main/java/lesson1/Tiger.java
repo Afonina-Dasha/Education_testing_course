@@ -5,11 +5,6 @@ import java.util.UUID;
 
  public class Tiger extends Predator {
 
-    public void Gen(){
-        int gen1;
-         gen = UUID.randomUUID();
-    }
-
     public Tiger(int heft, int age, UUID gen){
         super(heft, age, gen);
     }
