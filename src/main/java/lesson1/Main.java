@@ -13,13 +13,11 @@ public class Main {
     Animal rabbit = new Rabbit(2, 0, UUID.randomUUID());
     System.out.println(tiger.getGender_1());
 
-        boolean check = sheep.CalcOfFoodEaten(1);
-        if (check){
-            System.out.println("Животное живет");
-        }
-        else {
-            System.out.println("Животное умирает");
-        }
+    Meat meat = new Meat();
+    meat.setWeight(200);
+    System.out.println(tiger.heft);
+    tiger.eat(meat);
+    System.out.println(tiger.heft);
     }
 }
 

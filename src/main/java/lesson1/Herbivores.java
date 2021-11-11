@@ -11,6 +11,6 @@ public abstract class Herbivores extends Animal {
         }
     @Override
     protected double getWeightCoef() {
-        return 2/3;
+        return (((double) 2)/3);
     }
 }

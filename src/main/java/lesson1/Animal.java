@@ -44,11 +44,14 @@ public abstract class Animal {
         return create_child(child_gen);
     }
     protected abstract Animal create_child(UUID child_gen);
-    protected boolean CalcOfFoodEaten(double weight) {// подсчет съеденной еды
+    private boolean CalcOfFoodEaten(double weight) {// подсчет съеденной еды
         if (weight < heft * getWeightCoef()) {
+            System.out.println("Животное умирает");
             return false;
         }
+        System.out.println("Животное живет");
         return true;
+
     }
     protected abstract double getWeightCoef();
 }
