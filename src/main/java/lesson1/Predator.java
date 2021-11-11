@@ -13,6 +13,4 @@ public abstract class Predator extends Animal{
     protected double getWeightCoef() {
         return 1/2;
     }
-
-
 }

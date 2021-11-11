@@ -8,11 +8,9 @@ public abstract class Herbivores extends Animal {
     }
     public void eat(Grass grass) {
         super.eat(grass);
-
         }
     @Override
     protected double getWeightCoef() {
         return 2/3;
     }
-
 }

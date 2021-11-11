@@ -31,7 +31,6 @@ public abstract class Animal {
             gender = "female";
         }
     }
-
     public String getGender_1() {
         return gender;
     }
@@ -44,9 +43,7 @@ public abstract class Animal {
         //new StringBuffer().append(gen).append(gen).toString(); - чтобы не занималась память
         return create_child(child_gen);
     }
-
     protected abstract Animal create_child(UUID child_gen);
-
     private boolean CalcOfFoodEaten(double weight) {// подсчет съеденной еды
         if (weight < heft * getWeightCoef()) {
             return false;
@@ -54,5 +51,4 @@ public abstract class Animal {
         return true;
     }
     protected abstract double getWeightCoef();
-
 }
