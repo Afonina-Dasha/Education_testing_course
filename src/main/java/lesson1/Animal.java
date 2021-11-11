@@ -44,7 +44,7 @@ public abstract class Animal {
         return create_child(child_gen);
     }
     protected abstract Animal create_child(UUID child_gen);
-    private boolean CalcOfFoodEaten(double weight) {// подсчет съеденной еды
+    protected boolean CalcOfFoodEaten(double weight) {// подсчет съеденной еды
         if (weight < heft * getWeightCoef()) {
             return false;
         }
