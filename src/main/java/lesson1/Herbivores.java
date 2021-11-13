@@ -6,11 +6,14 @@ public abstract class Herbivores extends Animal {
     public Herbivores(int heft, int age, UUID gen) {
         super(heft, age, gen);
     }
+
     public void eat(Grass grass) {
         super.eat(grass);
-        }
+    }
+
+    //хорошее решение.
     @Override
     protected double getWeightCoef() {
-        return (((double) 2)/3);
+        return (((double) 2) / 3);
     }
 }

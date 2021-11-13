@@ -4,6 +4,9 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
+
+
+
     Animal tiger = new Tiger(300, 5, UUID.randomUUID()); //Tiger является наследником Animal, этим достигается абстракция
         tiger.age = 10;
     Animal lion = new Lion(350, 4, UUID.randomUUID());
