@@ -6,14 +6,17 @@ public abstract class Animal {
     protected double heft; //вес
     protected int age; //возраст
     private UUID gen; //уникальный генетический код
+    //где рализованнно, что животное умирает если съела меньше положенной нормы?
     public void eat(Food food) {
         if (CalcOfFoodEaten(food.weight)) {
             heft = heft + heft / 25;
         }
     }
+    //зачем метод с пустым телом? 
     public void walk() {
-    }
+    }    
     public abstract String voice();
+    //этот конструктор по идеи противоречит спецификации
     public Animal(int heft, int age, UUID gen) {
         this.heft = heft;
         this.age = age;
@@ -34,7 +37,7 @@ public abstract class Animal {
     public String getGender_1() {
         return gender;
     }
-
+    //зачем нужен этот метод?
     public Animal Reproduction(Animal rep) {
         if (rep.gender == this.gender || rep.getClass() != this.getClass()) {
             return null;
