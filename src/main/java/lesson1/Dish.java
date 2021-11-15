@@ -1,17 +1,27 @@
 package lesson1;
+import java.util.ArrayList;
 
-public class Dish {
-    public String name;
-    public int price;
-    public void dish(String name, int price){
-        this.name = name;
-        this.price = price;
+public class Dish { //Блюдо
+    private String name; //название блюда
+    private double price; // цена
+    public void Dish(final String name, final double price){
+        this.setName(name);
+        this.setPrice(price);
     }
-    public String getName(){// возвращает имя объекта (метод получает данные name)
+    public void setName(final String name){
+        this.name =name;
+    }
+    public String getName(){ //метод получает данные name
         return name;
     }
-    public int getPrice(){ //
+    public double getPrice(){
         return price;
+    }
+    public void setPrice(final double price) {
+        this.price = price;
+    }
+    public void printDet(){
+        System.out.println(this.getName() + " : " + this.getPrice());
     }
     public String toString(){ // выводит имя класса объекта (преобразует и возвращает строку
         return name + "-" + price;
