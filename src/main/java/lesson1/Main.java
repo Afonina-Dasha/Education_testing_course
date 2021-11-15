@@ -6,6 +6,9 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите названия блюд для заказа: ");
         String Count = scan.next();
+        Dish dish = new Drink();
+        dish.name = "Кофе";
+        System.out.println(scan);
     }
 }
 

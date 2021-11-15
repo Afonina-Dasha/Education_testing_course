@@ -1,6 +1,6 @@
 package lesson1;
 
-public class Food {
+public class Food extends Dish {
     String[] food = new String[]{"Пицца", "Бургер", "Шаурма"};
     int[] food_prices = new int[]{500, 140, 120};
     int foodNumber = 0;
