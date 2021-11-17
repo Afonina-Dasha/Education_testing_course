@@ -1,4 +1,4 @@
-package lesson_cafe;
+package lesson1;
 
 public abstract class Dish {
     public String name; //название блюда
@@ -7,10 +7,11 @@ public abstract class Dish {
         this.name = name;
         this.price = price;
     }
-    public String getName(){ //метод получает данные name
+    public Food getName(){ //метод получает данные name
         return name;
     }
     public double getPrice(){
         return price;
     }
+
 }

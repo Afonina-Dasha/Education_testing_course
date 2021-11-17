@@ -1,7 +1,7 @@
-package lesson_cafe;
+package lesson1;
 
 public class MenuParser { // parser - считыватель
-    public static Dish parsedDrink(String menuNumber){
+    public static Drink parsedDrink(String menuNumber){
         switch (menuNumber){
             case "1":
                 return new Drink("Кофе", 150);
@@ -13,7 +13,7 @@ public class MenuParser { // parser - считыватель
                 return null;
         }
     }
-    public static Dish parsedFood(String menuNumber){
+    public static Food parsedFood(String menuNumber){
         switch (menuNumber){
             case "4":
                 return new Food("Пицца", 500);

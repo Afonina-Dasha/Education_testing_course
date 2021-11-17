@@ -1,4 +1,4 @@
-package lesson_cafe;
+package lesson1;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         boolean isTypeChosen = false;
         boolean isEnd = false;
-        ArrayList<Order> orders = new ArrayList<>();
+        ArrayList<Order> orders = new ArrayList<>(); // сохраняем сюда заказы
         Order order = null;
 
         //Создаем новый заказ
@@ -35,10 +35,10 @@ public class Main {
                 String chosenDish = inputAnswer.next();
 
                 if (MenuParser.parsedDrink(chosenDish) != null) {//узнаем, есть ли мы в этом диапозоне
-                    Dish item = MenuParser.parsedDrink(chosenDish);//parsedDrink принимает на вход значение, которое ввел пользователь
-                    order.addItem(item);
+                    Drink item = MenuParser.parsedDrink(chosenDish);//parsedDrink принимает на вход значение, которое ввел пользователь
+                    order.addDrink(item);
                 } else if (MenuParser.parsedFood(chosenDish) != null) {
-                    order.addItem(MenuParser.parsedFood(chosenDish));
+                    order.addFood(MenuParser.parsedFood(chosenDish));
                 } else if (chosenDish.equals("0")) {
                     orders.add(order);
                     float total = order.calculate();// подсчитывание суммы заказа

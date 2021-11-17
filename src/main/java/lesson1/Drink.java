@@ -1,4 +1,4 @@
-package lesson_cafe;
+package lesson1;
 
 public class Drink extends Dish{
     public Drink(String name, double price){
