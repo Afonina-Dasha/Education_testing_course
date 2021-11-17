@@ -3,7 +3,7 @@ package lesson_cafe;
 public abstract class Dish {
     public String name; //название блюда
     public double price; // цена
-    public void Dish(String name, double price){
+    public Dish(String name, double price){
         this.name = name;
         this.price = price;
     }
