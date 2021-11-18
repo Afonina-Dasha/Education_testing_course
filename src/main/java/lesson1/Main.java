@@ -28,6 +28,7 @@ public class Main {
         }
             while (!isTypeChosen);
 
+
             //Блок обработки заказа
             do {
                 System.out.println("Для заказа сделайте выбор от 1 до 6, 0 -завершение заказа: ");

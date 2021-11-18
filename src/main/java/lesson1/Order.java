@@ -6,18 +6,18 @@ public abstract class Order { //Заказ
     ArrayList<Dish> orderBody = new ArrayList<>(); // тело заказа
     //ArrayList это саморасширяющийся массив, внутри храним Dish(и Food и Drink)
     float sum = 0;
-    ArrayList<String> orderItemName = new ArrayList<>(); // массив маркер
+    ArrayList<Food> orderItemName = new ArrayList<>(); // массив маркер
     public abstract float calculate(); // метод подсчитывает сумму, сумма из тела заказа orderBody
 
 
     public void addFood(Food dish){ //при каждом добавлении еды проверяем, он есть в заказе?
-        if(isItInOrder(dish.getName())){
+        if(isItInOrder(dish)){
             sum += dish.getPrice() * 0.5; // если да, зашли сюда
-            orderItemName.remove(dish.getName()); // удалили
+            //orderItemName.remove(dish.getName()); // удалили
         }
         else {
             sum += dish.getPrice();
-            orderItemName.add(dish.getName());// если нет, до добавили в наш массив маркер
+            orderItemName.add(dish);// если нет, до добавили в наш массив маркер
         }
         orderBody.add(dish);
     }

@@ -7,9 +7,11 @@ public abstract class Dish {
         this.name = name;
         this.price = price;
     }
-    public Food getName(){ //метод получает данные name
+
+    public String getName() {
         return name;
     }
+
     public double getPrice(){
         return price;
     }
