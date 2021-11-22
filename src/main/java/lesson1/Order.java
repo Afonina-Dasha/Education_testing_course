@@ -13,7 +13,7 @@ public abstract class Order { //Заказ
     public void addFood(Food dish){ //при каждом добавлении еды проверяем, он есть в заказе?
         if(isItInOrder(dish)){
             sum += dish.getPrice() * 0.5; // если да, зашли сюда
-            //orderItemName.remove(dish.getName()); // удалили
+            orderItemName.remove(dish.getName()); // удалили
         }
         else {
             sum += dish.getPrice();
