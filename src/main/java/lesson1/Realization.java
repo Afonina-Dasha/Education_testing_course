@@ -20,7 +20,7 @@ public class Realization {
         while (true) {
 
             number = number + 1;
-            //totalSum = totalSum + basicImpl(fullOrder); //доделать
+            //totalSum = totalSum + basicImpl(); //доделать
             System.out.println(System.getProperty("Вывести полный отчет по заказам за день?"));
             Scanner inputAnswer = new Scanner(System.in);
             String answer = inputAnswer.next();
@@ -33,9 +33,9 @@ public class Realization {
         }
     }
     public Order findDish(int answer, ArrayList<Order> menuArr) {
-        for (Order orders : menuArr) {
-            if (menuArr.indexOf(orders) + 1 == answer) {
-                return order;
+        for (Order fullOrder : menuArr) {
+            if (menuArr.indexOf(fullOrder) + 1 == answer) {
+                return fullOrder;
             }
         }
         return null;
