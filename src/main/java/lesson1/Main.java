@@ -10,6 +10,7 @@ public class Main {
         Realization go = new Realization();
         go.basicImpl();
         go.fullReport();
+
     }
 
 }

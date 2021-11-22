@@ -32,6 +32,14 @@ public class Realization {
 
         }
     }
+    public Order findDish(int answer, ArrayList<Order> menuArr) {
+        for (Order orders : menuArr) {
+            if (menuArr.indexOf(orders) + 1 == answer) {
+                return order;
+            }
+        }
+        return null;
+    }
 
     public void basicImpl() {
 
