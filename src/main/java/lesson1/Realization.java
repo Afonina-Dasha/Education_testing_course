@@ -74,7 +74,7 @@ public class Realization {
             } else if (MenuParser.parsedFood(chosenDish) != null) {
                 order.addFood(MenuParser.parsedFood(chosenDish));
             } else if (chosenDish.equals("0")) {
-                orders.add(order);
+                orders.add(order); //после завершения, складываем заказы в массив
                 float total = order.calculate();// подсчитывание суммы заказа
                 System.out.println(String.format(("Ваш заказ на сумму: %s руб."), total));
                 isEnd = true; // переменная для завершения цикла
