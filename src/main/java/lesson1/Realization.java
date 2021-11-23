@@ -65,7 +65,6 @@ public class Realization {
     public void basicImpl() {
 
         do {
-
             selectOrderType();
             processingOrder();
             System.out.println("Для создания нового заказа введите 1, для завершения смены 0: ");

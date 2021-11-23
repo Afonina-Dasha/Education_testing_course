@@ -5,15 +5,15 @@ public class OfflineOrder extends Order{
     int drinkCount = 0;
     @Override
     public float calculate() {
-        return sum; //не делаем скидок
+        return sum;
     }
 
     @Override
     public void addDrink(Drink dish) {
         drinkCount++;
         orderBody.add(dish);
-        if(drinkCount % 2 == 0){ // если это второй напиток, то
-            sum += dish.getPrice() * 0.5; //второй напиток идет в подарок
+        if(drinkCount % 2 == 0){
+            sum += dish.getPrice() * 0.5;
         }
         else {
             sum += dish.getPrice();
