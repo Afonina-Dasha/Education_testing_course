@@ -22,11 +22,11 @@ public class Realization {
             answer = inputAnswer.next();
             if (answer.equals("yes")) {
                 order = new OnlineOrder();
-                System.out.println("Мы готовим для вас онлайн заказ.");
+                System.out.println("Готовим для вас онлайн заказ.");
                 isTypeChosen = true;
             } else if (answer.equals("no")) {
                 order = new OfflineOrder();
-                System.out.println("Мы готовим для вас офлайн заказ.");
+                System.out.println("Готовим для вас офлайн заказ.");
                 isTypeChosen = true;
             } else {
                 System.out.println("Мы вас не поняли.");
@@ -39,7 +39,7 @@ public class Realization {
         do {
 
             isEnd = false;
-            System.out.println("Для заказа сделайте выбор от 1 до 6, 0 -завершение заказа: ");
+            System.out.println("Для заказа сделайте выбор от 1 до 6, 0 - завершение заказа: ");
             Scanner inputAnswer = new Scanner(System.in);
             String chosenDish = inputAnswer.next();
 

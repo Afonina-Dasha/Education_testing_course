@@ -5,8 +5,9 @@ import java.util.ArrayList;
 public abstract class Order {
 
     ArrayList<Dish> orderBody = new ArrayList<>();
-    float sum = 0;
     ArrayList<Food> orderItemName = new ArrayList<>();
+    float sum = 0;
+
     public abstract float calculate();
 
     public void addFood(Food dish){
