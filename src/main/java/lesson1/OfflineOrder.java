@@ -5,7 +5,7 @@ public class OfflineOrder extends Order{
     int drinkCount = 0;
     @Override
     public float calculate() {
-        return sum;
+        return sum; //не делаем скидок
     }
 
     @Override

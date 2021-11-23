@@ -4,6 +4,6 @@ public class OnlineOrder extends Order{
 
     @Override
     public float calculate() {
-        return sum * 0.85f;
+        return sum * 0.85f; // скидка 15%
     }
 }
