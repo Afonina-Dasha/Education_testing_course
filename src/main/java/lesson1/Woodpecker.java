@@ -1,6 +1,7 @@
 package lesson1;
 
-public class Titmouse implements Bird, Flyable, Migratable { //синица
+public class Woodpecker implements Bird, Flyable, Migratable { //дятлы
+
 
     @Override
     public void layEggs() {

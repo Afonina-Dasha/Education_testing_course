@@ -1,10 +1,10 @@
 package lesson1;
 
-public class Titmouse implements Bird, Flyable, Migratable { //синица
+public class Eagle implements Bird, Flyable, Migratable{ //орлы
+
 
     @Override
     public void layEggs() {
-
     }
 
     @Override

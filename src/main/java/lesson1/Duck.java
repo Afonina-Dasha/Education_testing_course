@@ -1,12 +1,10 @@
 package lesson1;
 
-public class Titmouse implements Bird, Flyable, Migratable { //синица
-
+public class Duck implements Bird, Flyable, Migratable, Swimmable {
     @Override
     public void layEggs() {
 
     }
-
     @Override
     public void fly() {
         Flyable.super.fly();
@@ -15,5 +13,10 @@ public class Titmouse implements Bird, Flyable, Migratable { //синица
     @Override
     public void migrate() {
         Migratable.super.migrate();
+    }
+
+    @Override
+    public void swim() {
+        Swimmable.super.swim();
     }
 }

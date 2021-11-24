@@ -1,8 +1,8 @@
 package lesson1;
 
-public class Chicken implements Bird {
+public class Ostriche implements Bird{// страусы
+
     @Override
     public void layEggs() {
-
     }
 }
