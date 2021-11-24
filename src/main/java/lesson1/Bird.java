@@ -1,8 +1,9 @@
 package lesson1;
 
-public abstract class Bird extends Animal implements Flyable, Swimmable, Migratable{
+public interface Bird extends LayEggsable {
 
     static final int wings = 2;
-    public void LayEggs(){ //сносить яйца
+    public default void layEggs(){ //сносить яйца
     }
+
 }

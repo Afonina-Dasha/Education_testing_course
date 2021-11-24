@@ -1,4 +1,6 @@
 package lesson1;
 
-public abstract class Eagles extends Bird{ //орлы
+public class Eagles implements Bird, Flyable, Migratable{ //орлы
+
+
 }

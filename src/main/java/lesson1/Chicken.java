@@ -1,4 +1,8 @@
 package lesson1;
 
-public abstract class Chicken extends Bird {
+public class Chicken implements Bird {
+    @Override
+    public void layEggs() {
+        Bird.super.layEggs();
+    }
 }

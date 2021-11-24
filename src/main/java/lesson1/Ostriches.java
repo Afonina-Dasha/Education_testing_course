@@ -1,4 +1,6 @@
 package lesson1;
 
-public abstract class Ostriches extends Bird{// страусы
+public class Ostriches implements Bird{// страусы
+
+
 }

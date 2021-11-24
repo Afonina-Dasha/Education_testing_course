@@ -1,8 +1,8 @@
 package lesson1;
 
-public interface Flyable{
+public interface Flyable extends Bird{
+        default void fly(){
 
-    default void fly(){
+        }
 
-    }
 }

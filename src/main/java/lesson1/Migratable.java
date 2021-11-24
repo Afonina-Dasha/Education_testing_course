@@ -1,7 +1,8 @@
 package lesson1;
 
-public interface Migratable {
-
+public interface Migratable extends Bird{
     default void migrate(){
+
     }
+
 }

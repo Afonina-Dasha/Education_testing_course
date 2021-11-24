@@ -1,4 +1,6 @@
 package lesson1;
 
-public abstract class Woodpeckers extends Bird{ //дятлы
+public class Woodpeckers implements Bird, Flyable, Migratable { //дятлы
+
+
 }

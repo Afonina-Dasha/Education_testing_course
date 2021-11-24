@@ -1,4 +1,5 @@
 package lesson1;
 
-public abstract class Penguins extends Bird{
+public class Penguins implements Bird, Migratable, Swimmable {
+
 }
