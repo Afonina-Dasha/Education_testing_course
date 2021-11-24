@@ -8,14 +8,14 @@ public class Realization {
     boolean isTypeChosen = false;
     boolean isEnd = false;
     boolean isEndFull = false;
-    ArrayList<Order> orders = new ArrayList<>();
+    ArrayList<Order> orders = new ArrayList<>(); // сохраняем сюда заказы
     ArrayList<Order> fullOrder = new ArrayList<>();
     int countOrder = 0;
     Order order = null;
     String answer = null;
 
     private void selectOrderType(){
-
+        //Создаем новый заказ
         System.out.println("Вы хотите сделать онлайн заказ?  (yes/no)");
         do {
             Scanner inputAnswer = new Scanner(System.in);
@@ -36,6 +36,7 @@ public class Realization {
     }
 
     private void processingOrder(){
+        //Блок обработки заказа
         do {
 
             isEnd = false;
@@ -43,18 +44,18 @@ public class Realization {
             Scanner inputAnswer = new Scanner(System.in);
             String chosenDish = inputAnswer.next();
 
-            if (MenuParser.parsedDrink(chosenDish) != null) {
-                Drink item = MenuParser.parsedDrink(chosenDish);
+            if (MenuParser.parsedDrink(chosenDish) != null) {//узнаем, есть ли мы в этом диапозоне
+                Drink item = MenuParser.parsedDrink(chosenDish);//parsedDrink принимает на вход значение, которое ввел пользователь
                 order.addDrink(item);
             } else if (MenuParser.parsedFood(chosenDish) != null) {
                 order.addFood(MenuParser.parsedFood(chosenDish));
             } else if (chosenDish.equals("0")) {
                 fullOrder.add(order);
                 countOrder++;
-                orders.add(order);
-                float total = order.calculate();
+                orders.add(order);//после завершения, складываем заказы в массив
+                float total = order.calculate();// подсчитывание суммы заказа
                 System.out.println(String.format(("Ваш заказ на сумму: %s руб."), total));
-                isEnd = true;
+                isEnd = true;// переменная для завершения цикла
             } else {
                 System.out.println("Мы не поняли ваш выбор, попробуйте еще.");
             }

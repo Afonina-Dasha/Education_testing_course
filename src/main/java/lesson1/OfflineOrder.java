@@ -12,8 +12,8 @@ public class OfflineOrder extends Order{
     public void addDrink(Drink dish) {
         drinkCount++;
         orderBody.add(dish);
-        if(drinkCount % 2 == 0){
-            sum += dish.getPrice() * 0.5;
+        if(drinkCount % 2 == 0){// если это второй напиток, то
+            sum += dish.getPrice() * 0.5; //второй напиток идет в подарок
         }
         else {
             sum += dish.getPrice();
