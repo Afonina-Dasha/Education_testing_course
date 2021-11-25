@@ -1,5 +1,6 @@
 package lesson1;
 
-public abstract class Service {
+public class Service implements Taxable {
     public float price;
+
 }
