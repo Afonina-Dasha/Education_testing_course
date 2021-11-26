@@ -7,28 +7,23 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        /*Scanner answer = new Scanner(System.in);
-        System.out.println("Введите сумму для расчета налога: ");
-        float number = answer.nextFloat();*/
-
 
         NDS nds = new NDS();
         NDFL ndfl = new NDFL();
         ProgressiveTax progressiveTax = new ProgressiveTax();
 
-
-        /*List<Service> services = new ArrayList<>();
+        List<Service> services = new ArrayList<>();
         services.add(nds);
         services.add(ndfl);
         services.add(progressiveTax);
-        for (Service calc: services
+        for (Service ignored : services
              ) {
-            calc.calculate(30000);
+            float calcNds = nds.calculate(30000);
+            float calcNdfl = ndfl.calculate(30000);
+            float calcProgTax = progressiveTax.calculate(30000);
+            System.out.println("Налог НДС= " + calcNds +" Налог НДФЛ = " + calcNdfl + " Прогрессивный налог = " + calcProgTax);
+
         }
-        System.out.println(services +);*/
-        ndfl.calculate(50000);
-        nds.calculate(50000);
-        progressiveTax.calculate(50000);
 
     }
 }
