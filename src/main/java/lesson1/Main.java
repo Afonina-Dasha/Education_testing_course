@@ -25,9 +25,7 @@ public class Main {
             System.out.println("Налог с суммы 30000: " +" Налог НДС= " + calcNds +" Налог НДФЛ = "
                                + calcNdfl + " Прогрессивный налог = " + calcProgTax);
 
-
         }
-
     }
 }
 
