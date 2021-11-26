@@ -16,12 +16,15 @@ public class Main {
         services.add(nds);
         services.add(ndfl);
         services.add(progressiveTax);
+
         for (Service ignored : services
              ) {
             float calcNds = nds.calculate(30000);
             float calcNdfl = ndfl.calculate(30000);
             float calcProgTax = progressiveTax.calculate(30000);
-            System.out.println("Налог НДС= " + calcNds +" Налог НДФЛ = " + calcNdfl + " Прогрессивный налог = " + calcProgTax);
+            System.out.println("Налог с суммы 30000: " +" Налог НДС= " + calcNds +" Налог НДФЛ = "
+                               + calcNdfl + " Прогрессивный налог = " + calcProgTax);
+
 
         }
 
