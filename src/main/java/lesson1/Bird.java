@@ -6,5 +6,4 @@ public interface Bird extends LayEggsable {
 
     void layEggs();
 
-
 }
