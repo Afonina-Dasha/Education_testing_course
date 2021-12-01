@@ -17,6 +17,7 @@ public class Main {
         services.add(ndfl);
         services.add(progressiveTax);
 
+        //зачем тут цикл? он три раза выводит один и тот же расчет
         for (Service ignored : services
              ) {
             float calcNds = nds.calculate(30000);
