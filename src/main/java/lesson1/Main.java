@@ -16,9 +16,9 @@ public class Main {
         NDFL ndfl = new NDFL();
         ProgressiveTax progressiveTax = new ProgressiveTax();
 
-            nds.calculate(30000);
-            ndfl.calculate(30000);
-            progressiveTax.calculate(30000);
+            nds.calculate(45000);
+            ndfl.calculate(45000);
+            progressiveTax.calculate(45000);
 
     }
 }
