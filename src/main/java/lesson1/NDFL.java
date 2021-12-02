@@ -1,9 +1,12 @@
 package lesson1;
 
-public class NDFL extends Service implements Taxable{
+public class NDFL implements Taxable{
 
     @Override
-    public float calculate(float base) {
-        return price = (float) (base * 0.13);
+    public void calculate(float base) {
+
+        float price;
+        price = (float) (base * 0.13);
+        System.out.println("Налог НДФЛ = " + price);
     }
 }

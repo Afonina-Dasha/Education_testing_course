@@ -1,9 +1,12 @@
 package lesson1;
 
-public class NDS extends Service implements Taxable{
+public class NDS implements Taxable{
 
     @Override
-    public float calculate(float base) {
-        return price = (float) (base * 0.2);
+    public void calculate(float base) {
+
+        float price;
+        price = (float) (base * 0.2);
+        System.out.println("Налог НДС = " + price);
     }
 }
