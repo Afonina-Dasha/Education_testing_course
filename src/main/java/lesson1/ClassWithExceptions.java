@@ -17,6 +17,10 @@ public class ClassWithExceptions{
             throw new Exception_1();
         }
     }
+    /*public void divisionByZero(int num) throws Exception{
+
+        if()
+    }*/
 
     public boolean isDigit(String num) throws IllegalArgumentException{ //проверка строки на число
         try{
