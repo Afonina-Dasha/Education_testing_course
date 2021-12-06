@@ -1,8 +1,11 @@
 package lesson1;
 
+import java.util.Scanner;
+
 public class ClassWithExceptions{
 
-    public void callExceptions(Integer num) throws Exception {
+
+    public void callExceptions(int num) throws Exception {
 
         if(num == 0){
             throw new Exception_3();
