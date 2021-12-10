@@ -10,7 +10,7 @@ public class RandomValue {
     public RandomValue(String path) {
         this.path = path;
         try {
-            file = new FileReader(src/main/java/resources/FirstNames.txt);
+            file = new FileReader("src/main/resources/FirstNames.txt");
         }
         catch (FileNotFoundException e){
             e.printStackTrace();
