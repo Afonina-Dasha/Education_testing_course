@@ -1,5 +1,6 @@
 package lesson1;
 
+
 import java.io.*;
 
 public class RandomValue {
@@ -9,7 +10,7 @@ public class RandomValue {
     public RandomValue(String path) {
         this.path = path;
         try {
-            file = new FileReader(путь к файлу);
+            file = new FileReader(src/main/java/resources/FirstNames.txt);
         }
         catch (FileNotFoundException e){
             e.printStackTrace();

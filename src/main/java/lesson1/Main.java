@@ -1,4 +1,5 @@
 package lesson1;
+package resources;
 
 public class Main {
 
