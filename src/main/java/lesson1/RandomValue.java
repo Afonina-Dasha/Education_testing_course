@@ -2,31 +2,31 @@ package lesson1;
 
 
 import java.io.*;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class RandomValue {
     String path;
     FileReader file;
+    List<String> value;
 
     public RandomValue(String path) {
         this.path = path;
         try {
-            file = new FileReader("src/main/resources/FirstNames.txt");
+            file = new FileReader(path);
         }
-        catch (FileNotFoundException e){
+        catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-    }
-    public String getRandom(){
         BufferedReader br = new BufferedReader(file);
-        String value;
-        try {
-            value = br.readLine();
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-        return "";
+        value = br.lines().collect(Collectors.toList());
+    }
+
+    public String getRandom(){
+        int rand = new Random().nextInt(value.size());
+        return value.get(rand);
+
     }
 
 
