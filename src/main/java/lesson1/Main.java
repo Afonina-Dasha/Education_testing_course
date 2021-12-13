@@ -14,6 +14,7 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) {
+
         //1
         RandomValue secondRandomGenerator = new RandomValue("src/main/resources/SecondNames.txt");
         RandomValue nameRandomGenerator = new RandomValue("src/main/resources/FirstNames.txt");
@@ -21,7 +22,7 @@ public class Main {
         //2
         List<FIO> fioList = new ArrayList<>();
 
-        IntStream.range(0, 100).forEach(i->{
+        IntStream.range(0, 100).forEach(i -> {
             String second = secondRandomGenerator.getRandom();
             String name = nameRandomGenerator.getRandom();
             String otchestvo = otchestvoRandomGenerator.getRandom();
@@ -34,19 +35,19 @@ public class Main {
         File file = null;
         try {
             file = Files.createFile(Paths.get(fileName)).toFile();
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         FileOutputStream fo = null;
-        try{
+        try {
             fo = new FileOutputStream(file);
-        } catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
         try {
             StringBuilder stringBuilder = new StringBuilder();
-            for (FIO fio:fioList) {
+            for (FIO fio : fioList) {
                 stringBuilder.append(fio.toString() + "\n");
             }
             byte[] bytes = stringBuilder.toString().getBytes();
@@ -54,17 +55,16 @@ public class Main {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
-            try{
+        } finally {
+            try {
                 fo.close();
-            } catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
-
-
+        //4
+        DirectoryDelete directoryDelete = new DirectoryDelete();
+        directoryDelete.deleteFile(file);
     }
 }
 
