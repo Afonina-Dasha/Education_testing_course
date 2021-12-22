@@ -64,7 +64,8 @@ public class Main {
         }
         //4
         DirectoryDelete directoryDelete = new DirectoryDelete();
-        directoryDelete.deleteFile(file);
+        directoryDelete.deleteDir(file);
+
     }
 }
 
