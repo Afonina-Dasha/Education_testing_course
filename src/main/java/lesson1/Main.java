@@ -13,21 +13,26 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите число: ");
-
-            int number = scanner.nextInt();
-            ClassWithExceptions withExceptions = new ClassWithExceptions();
             try {
-                System.out.println(withExceptions.callExceptions(number));
-            } catch (Exception_2 e) {
-                e.printStackTrace();
-            } catch (Exception_1 e) {
-                e.printStackTrace();
-            }
-              finally {
-                System.out.println("Произведение числа на самого себя: " + number * number);
-            }
+                int number = scanner.nextInt();
 
-            System.out.println("Я выполняюсь.");
+                ClassWithExceptions withExceptions = new ClassWithExceptions();
+                try {
+                    System.out.println(withExceptions.callExceptions(number));
+                } catch (Exception_2 e) {
+                    e.printStackTrace();
+                } catch (Exception_1 e) {
+                    e.printStackTrace();
+                } finally {
+                    System.out.println("Произведение числа на самого себя: " + number * number);
+                }
+
+                System.out.println("Я выполняюсь.");
+            }
+            catch (InputMismatchException e){
+                System.out.println("Вы ввели не число!");
+                e.printStackTrace();
+            }
    }
 }
 
