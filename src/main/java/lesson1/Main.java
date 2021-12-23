@@ -29,6 +29,9 @@ public class Main {
             FIO fio = new FIO(second, name, otchestvo);
             fioList.add(fio);
         });
+        //4
+        DirectoryDelete directoryDelete = new DirectoryDelete();
+        directoryDelete.deleteFiles();
 
         //3
         String fileName = String.format("out/tests/fios-%s.txt", LocalDateTime.now().toString().replace(":", "_"));
@@ -62,10 +65,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        //4
-        DirectoryDelete directoryDelete = new DirectoryDelete();
-        directoryDelete.deleteDir(file);
-
     }
 }
 
