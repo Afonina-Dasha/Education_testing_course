@@ -1,11 +1,10 @@
 package lesson1;
 
-import java.util.Scanner;
-
 public class ClassWithExceptions{
 
 
-    public void callExceptions(int num) throws Exception {
+    public boolean callExceptions(int num) throws Exception {
+
 
         if(num == 0){
             throw new Exception_3();
@@ -16,19 +15,23 @@ public class ClassWithExceptions{
         else if(num % 2 == 0){
             throw new Exception_1();
         }
-    }
-    /*public void divisionByZero(int num) throws Exception{
-
-        if()
-    }*/
-
-    public boolean isDigit(String num) throws IllegalArgumentException{ //проверка строки на число
-        try{
-            Integer.parseInt(num);
-            return true;
+        else {
+            throw new IllegalArgumentException();
         }
-        catch (IllegalArgumentException e){
+
+    }
+
+    /*public boolean isDigit(int num) throws IllegalArgumentException{ //проверка строки на число
+        try
+        {
+            double d = Integer.parseInt(String.valueOf(num));
+        }
+        catch(IllegalArgumentException e)
+        {
+            e.printStackTrace();
             return false;
         }
-    }
+        return true;
+    }*/
+
 }
