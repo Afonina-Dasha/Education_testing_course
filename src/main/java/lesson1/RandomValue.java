@@ -12,6 +12,7 @@ public class RandomValue {
     List<String> value;
 
     public RandomValue(String path) {
+
         this.path = path;
         try {
             file = new FileReader(path);
@@ -23,12 +24,10 @@ public class RandomValue {
         value = br.lines().collect(Collectors.toList());
     }
 
-    public String getRandom(){
+    public String getRandom() {
+
         int rand = new Random().nextInt(value.size());
         return value.get(rand);
 
     }
-
-
-
 }

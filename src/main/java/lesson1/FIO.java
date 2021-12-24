@@ -7,11 +7,12 @@ public class FIO {
     String lastname;
     String otchestvo;
 
-    public FIO(String lastname, String name, String otchestvo){
+    public FIO(String lastname, String name, String otchestvo) {
         this.lastname = lastname;
         this.name = name;
         this.otchestvo = otchestvo;
     }
+
     public String getLastname(){
         return lastname;
     }
