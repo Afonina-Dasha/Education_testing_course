@@ -20,26 +20,4 @@ public class ClassWithExceptions{
         }
 
     }
-
-    /*public boolean isDigit(int num) throws IllegalArgumentException{ //проверка строки на число
-        try
-        {
-            double d = Integer.parseInt(String.valueOf(num));
-        }
-        catch(IllegalArgumentException e)
-        {
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }*/
-    public static boolean isNumeric(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch(NumberFormatException e){
-            return false;
-        }
-    }
-
 }
