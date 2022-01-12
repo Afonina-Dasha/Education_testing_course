@@ -12,10 +12,9 @@ public class Person implements Comparable<Person>{
     public Person() {
 
         age = new Random().nextInt(99);
-        IntStream.range(0, 100).forEach(i -> {
         RandomValue nameRandomGenerator = new RandomValue("src/main/resources/FirstNames.txt");
         name = nameRandomGenerator.getRandom();
-        });
+        System.out.println(age + " " + name);
     }
 
     @Override
