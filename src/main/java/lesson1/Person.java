@@ -8,13 +8,12 @@ import java.util.stream.IntStream;
 public class Person implements Comparable<Person>{
     Integer age;
     String name;
-    HashMap<String, String> fio;
-
-    RandomValue nameRandomGenerator = new RandomValue("src/main/resources/FirstNames.txt");
 
     public Person() {
+
         age = new Random().nextInt(99);
         IntStream.range(0, 100).forEach(i -> {
+        RandomValue nameRandomGenerator = new RandomValue("src/main/resources/FirstNames.txt");
         name = nameRandomGenerator.getRandom();
         });
     }

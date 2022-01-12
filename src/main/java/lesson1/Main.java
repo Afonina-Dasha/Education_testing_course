@@ -7,8 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RandomValue nameRandomGenerator = new RandomValue("src/main/resources/FirstNames.txt");
-
         Set<Person> set = new HashSet<>();
         List<Person> personList = new ArrayList<>();
         IntStream.range(0,99).forEach(i -> {
@@ -17,6 +15,7 @@ public class Main {
         Collections.sort(personList, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
+
                 if(o1.age > o2.age){
                     return 1;
                 }
@@ -28,7 +27,6 @@ public class Main {
                 }
             }
         });
-        System.out.println(new Person());
     }
 }
 
