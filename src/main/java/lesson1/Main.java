@@ -7,6 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        RandomValue nameRandomGenerator = new RandomValue("src/main/resources/FirstNames.txt");
+
         Set<Person> set = new HashSet<>();
         List<Person> personList = new ArrayList<>();
         IntStream.range(0,99).forEach(i -> {
@@ -26,6 +28,7 @@ public class Main {
                 }
             }
         });
+        System.out.println(new Person());
     }
 }
 
