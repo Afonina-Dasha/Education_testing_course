@@ -7,13 +7,23 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        List<String> persons = new Arrays.asList()
+        List<Map<String, String>> parsedPerson = new ArrayList<>();
+        persons.forEach(i -> {
+            String[] fio = i.split(" ");
+            HashMap<String, String> parsed = new HashMap<>();
+            parsed.put("lastname", fio[0]);
+            parsed.put("name", fio [1]);
+            parsed.put("otchestvo", fio[2]);
+            parsedPerson.add(parsed);
+        });
 
         //1
         RandomValue secondRandomGenerator = new RandomValue("src/main/resources/SecondNames.txt");
