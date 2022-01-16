@@ -12,18 +12,7 @@ import java.util.stream.IntStream;
 
 public class Main {
 
-    public static void main(String[] args) {
-
-        List<String> persons = new Arrays.asList()
-        List<Map<String, String>> parsedPerson = new ArrayList<>();
-        persons.forEach(i -> {
-            String[] fio = i.split(" ");
-            HashMap<String, String> parsed = new HashMap<>();
-            parsed.put("lastname", fio[0]);
-            parsed.put("name", fio [1]);
-            parsed.put("otchestvo", fio[2]);
-            parsedPerson.add(parsed);
-        });
+    public static void main(String[] args) throws FileNotFoundException {
 
         //1
         RandomValue secondRandomGenerator = new RandomValue("src/main/resources/SecondNames.txt");
@@ -39,9 +28,7 @@ public class Main {
             FIO fio = new FIO(second, name, otchestvo);
             fioList.add(fio);
         });
-        //4
-        DirectoryDelete directoryDelete = new DirectoryDelete();
-        directoryDelete.deleteFiles();
+
 
         //3
         String fileName = String.format("out/tests/fios-%s.txt", LocalDateTime.now().toString().replace(":", "_"));
@@ -75,6 +62,18 @@ public class Main {
                 e.printStackTrace();
             }
         }
+        //List<String> persons = Arrays.asList(fileName.split(""));
+        List<String> persons = List.of(fileName.split(""));
+
+        List<Map<String, String>> parsedPerson = new ArrayList<>();
+        persons.forEach(i -> {
+            String[] fio = i.split(" ");
+            HashMap<String, String> parsed = new HashMap<>();
+            parsed.put("lastname", fio[0]);
+            parsed.put("name", fio [1]);
+            parsed.put("otchestvo", fio[2]);
+            parsedPerson.add(parsed);
+        });
     }
 }
 
